@@ -78,7 +78,7 @@ Node.js 22, npm, Docker and Docker Compose.
 Create `.env` in the project root using the following local development values:
 
 ```dotenv
-PORT=5003
+PORT=3000
 NODE_ENV=development
 DB_HOST=localhost
 DB_PORT=5433
@@ -100,8 +100,8 @@ docker compose up -d
 npm run start:dev
 ```
 
-- Base URL: `http://localhost:5003`
-- Swagger UI: `http://localhost:5003/docs`
+- Base URL: `http://localhost:3000`
+- Swagger UI: `http://localhost:3000/docs`
 - PostgreSQL: `localhost:5433`
 
 The bank fee account seed runs at application startup. It creates the configured BANK account if missing, without resetting an existing balance. A missing or incorrectly typed bank account prevents successful payment processing.
