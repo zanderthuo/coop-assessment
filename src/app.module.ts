@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AccountsModule } from './modules/accounts/accounts.module';
+import { PaymentsModule } from './modules/payments/payments.module';
 import databaseConfig from './config/database.config';
 
 @Module({
@@ -19,6 +21,10 @@ import databaseConfig from './config/database.config';
         config: ConfigType<typeof databaseConfig>,
       ) => config,
     }),
+
+    AccountsModule,
+
+    PaymentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
